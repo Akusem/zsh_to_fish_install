@@ -1,8 +1,8 @@
 # install zsh
-sudo apt install zsh
+sudo apt install zsh curl
 
 # install oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Download Fish like extension
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -18,6 +18,9 @@ sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions history-substring-se
 
 # Activate theme
 sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
+
+# Change default shell
+chsh --shell /bin/zsh $USER
 
 # Reload terminal
 source ~/.zshrc
