@@ -20,7 +20,7 @@ sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions history-substring-se
 sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
 
 # Change default shell
-chsh --shell /bin/zsh $USER
+sudo chsh --shell /bin/zsh $USER
 
 # Reload terminal
 zsh
