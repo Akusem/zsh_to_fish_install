@@ -14,10 +14,10 @@ git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 # Activate plugins
-sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions history-substring-search zsh-syntax-highlighting)' ~/.zshrc
+sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions history-substring-search zsh-syntax-highlighting)/' ~/.zshrc
 
 # Activate theme
-sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"' ~/.zshrc
+sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
 
 # Reload terminal
 source ~/.zshrc
