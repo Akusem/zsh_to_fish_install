@@ -1,7 +1,7 @@
-# install zsh
+# Install zsh
 sudo apt install zsh curl
 
-# install oh-my-zsh
+# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Download Fish like extension
@@ -18,6 +18,9 @@ sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions history-substring-se
 
 # Activate theme
 sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
+
+# Ensure that Ctrl+Backspace delete previous word in every terminal
+cat "bindkey '^H' backward-kill-word" >> ~/.zshrc
 
 # Change default shell
 sudo chsh --shell /bin/zsh $USER
