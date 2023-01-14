@@ -20,7 +20,7 @@ sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions history-substring-se
 sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
 
 # Ensure that Ctrl+Backspace delete previous word in every terminal
-cat "bindkey '^H' backward-kill-word" >> ~/.zshrc
+echo "bindkey '^H' backward-kill-word" >> ~/.zshrc
 
 # Change default shell
 sudo chsh --shell /bin/zsh $USER
