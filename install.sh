@@ -22,6 +22,9 @@ sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
 # Ensure that Ctrl+Backspace delete previous word in every terminal
 echo "bindkey '^H' backward-kill-word" >> ~/.zshrc
 
+# Install LazyDocker 
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
 # Change default shell
 sudo chsh --shell /bin/zsh $USER
 
