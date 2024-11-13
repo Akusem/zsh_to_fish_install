@@ -24,6 +24,8 @@ echo "bindkey '^H' backward-kill-word" >> ~/.zshrc
 
 # Install LazyDocker 
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+echo 'alias lzd="lazydocker"' >> ~/.zshrc
 
 # Change default shell
 sudo chsh --shell /bin/zsh $USER
